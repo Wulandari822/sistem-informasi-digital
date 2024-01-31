@@ -1,5 +1,9 @@
 <?php
 
+use App\Http\Controllers\Admin;
+use App\Http\Controllers\AdminController;
+use App\Http\Controllers\AuthController;
+use App\Http\Controllers\UserController;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -13,6 +17,10 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-Route::get('/', function () {
-    return view('welcome');
-});
+Route::get('/',[UserController::class,'index']);
+Route::get('/login',[AdminController::class, 'login'])->name('admin.login');
+Route::post('/authenticate',[AdminController::class, 'authenticate'])->name('admin.authenticate');
+
+Route::get('admin-dashbord',[AdminController::class,'index'])->name('admin-dashbord');
+// Route::group(['middleware' => 'admin.auth'],function(){
+// });
