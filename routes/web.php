@@ -18,9 +18,12 @@ use Illuminate\Support\Facades\Route;
 */
 
 Route::get('/',[UserController::class,'index']);
+
 Route::get('/login',[AdminController::class, 'login'])->name('admin.login');
 Route::post('/authenticate',[AdminController::class, 'authenticate'])->name('admin.authenticate');
+Route::get('/logout',[AdminController::class, 'logout'])->name('admin.logout');
 
-Route::get('admin-dashbord',[AdminController::class,'index'])->name('admin-dashbord');
-// Route::group(['middleware' => 'admin.auth'],function(){
-// });
+Route::group(['prefix' => 'admin', 'middleware'=> ['auth'],'as'=> 'admin.'],function(){
+    Route::get('admin-dashbord',[AdminController::class,'index'])->name('admin-dashbord');
+});
+
