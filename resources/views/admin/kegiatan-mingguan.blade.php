@@ -48,17 +48,17 @@
                                             <td class="text-center">{{ $kegiatan->kegiatan_mingguan }}</td>
                                             <td>{{ $kegiatan->isi_kegiatan }}</td>
                                             <td style="display: flex; gap: 5px;" class="text-center">
-                                                <form action="{{ route('admin.kegiatan-mingguan-delete',['id' => $kegiatan->id]) }}" method="post">
-                                                    @csrf
-                                                    @method('delete')
                                                     <a
                                                         href="{{ route('admin.kegiatan-mingguan-show', ['id' => $kegiatan->id]) }}">
                                                         <button class="btn btn-sm btn-success"><i
                                                                 class="bi bi-pencil-square"></i></button>
                                                     </a>
-                                                    <button class="btn btn-sm btn-danger"><i
-                                                            class="bi bi-trash3"></i></button>
-                                                </form>
+                                                    <form action="{{ route('admin.kegiatan-mingguan-delete',['id' => $kegiatan->id]) }}" method="post">
+                                                        @csrf
+                                                        @method('delete')
+                                                        <button class="btn btn-sm btn-danger"><i
+                                                                class="bi bi-trash3"></i></button>
+                                                    </form>
                                             </td>
                                         </tr>
                                     @endforeach
