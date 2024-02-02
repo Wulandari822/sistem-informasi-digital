@@ -6,12 +6,12 @@
         <div class="container-fluid">
           <div class="row mb-2">
             <div class="col-sm-6">
-              <h1>General Form</h1>
+              <h1>Tambah Kegiatan</h1>
             </div>
             <div class="col-sm-6">
               <ol class="breadcrumb float-sm-right">
-                <li class="breadcrumb-item"><a href="#">Home</a></li>
-                <li class="breadcrumb-item active">General Form</li>
+                <li class="breadcrumb-item"><a href="{{ route('admin.dashbord') }}">Home</a></li>
+                <li class="breadcrumb-item active">Tambah Kegiatan</li>
               </ol>
             </div>
           </div>
@@ -31,7 +31,8 @@
                 </div>
                 <!-- /.card-header -->
                 <!-- form start -->
-                <form>
+                <form action="{{ route('admin.kegiatan-mingguan-store') }}" method="POST">
+                  @csrf
                   <div class="card-body">
                     <div class="form-group">
                       <label for="exampleInputEmail1">Minggu Ke</label>

@@ -3,6 +3,7 @@
 use App\Http\Controllers\Admin;
 use App\Http\Controllers\AdminController;
 use App\Http\Controllers\AuthController;
+use App\Http\Controllers\KegiatanHarianController;
 use App\Http\Controllers\KegiatanMingguanController;
 use App\Http\Controllers\Slide1Controller;
 use App\Http\Controllers\UserController;
@@ -26,12 +27,18 @@ Route::post('/authenticate',[AdminController::class, 'authenticate'])->name('adm
 Route::get('/logout',[AdminController::class, 'logout'])->name('admin.logout');
 
 Route::group(['prefix' => 'admin', 'middleware'=> ['auth'],'as'=> 'admin.'],function(){
-    Route::get('admin-dashbord',[AdminController::class,'index'])->name('admin-dashbord');
+    Route::get('dashbord',[AdminController::class,'index'])->name('dashbord');
 
-    Route::get('admin-kegiatan-mingguan',[KegiatanMingguanController::class,'index'])->name('admin-kegiatan-mingguan');
-    Route::get('admin-kegiatan-mingguan-create',[KegiatanMingguanController::class,'create'])->name('admin-kegiatan-mingguan-create');
+    Route::get('kegiatan-harian',[KegiatanHarianController::class,'index'])->name('kegiatan-harian');
 
-    Route::get('admin-slide1',[Slide1Controller::class,'index'])->name('admin-slide1');
-    Route::get('admin-slide1-craate',[Slide1Controller::class,'create'])->name('admin-slide1-craate');
+    Route::get('kegiatan-mingguan',[KegiatanMingguanController::class,'index'])->name('kegiatan-mingguan');
+    Route::get('kegiatan-mingguan-create',[KegiatanMingguanController::class,'create'])->name('kegiatan-mingguan-create');
+    Route::post('kegiatan-mingguan-store',[KegiatanMingguanController::class,'store'])->name('kegiatan-mingguan-store');
+    Route::get('kegiatan-mingguan/{id}/show',[KegiatanMingguanController::class,'show'])->name('kegiatan-mingguan-show');
+    Route::put('kegiatan-mingguan/{id}',[KegiatanMingguanController::class,'update'])->name('kegiatan-mingguan-update');
+    Route::delete('kegiatan-mingguan/{id}/delete',[KegiatanMingguanController::class,'delete'])->name('kegiatan-mingguan-delete');
+
+    Route::get('slide1',[Slide1Controller::class,'index'])->name('slide1');
+    Route::get('slide1-craate',[Slide1Controller::class,'create'])->name('slide1-craate');
 });
 

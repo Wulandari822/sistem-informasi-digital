@@ -29,7 +29,7 @@ class AdminController extends Controller
         ];
 
         if(Auth::attempt($data)){
-            return redirect()->route('admin.admin-dashbord');
+            return redirect()->route('admin.dashbord');
         }else{
             return redirect()->route('admin.login')->with('failed', 'Email atau password salah');
         }

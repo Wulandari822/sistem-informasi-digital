@@ -6,12 +6,12 @@
         <div class="container-fluid">
             <div class="row mb-2">
                 <div class="col-sm-6">
-                    <h1>Kegiatan Mingguan</h1>
+                    <h1>Kegiatan Harian </h1>
                 </div>
                 <div class="col-sm-6">
                     <ol class="breadcrumb float-sm-right">
                         <li class="breadcrumb-item"><a href="{{ route('admin.dashbord') }}">Home</a></li>
-                        <li class="breadcrumb-item active">Kegiatan Mingguan</li>
+                        <li class="breadcrumb-item active">Kegiatan Harian</li>
                     </ol>
                 </div>
             </div>
@@ -26,8 +26,8 @@
                     <div class="card">
                         <div class="card-header">
                             <h3 class="card-title">Bordered Table</h3>
-                            <a href="{{ route('admin.kegiatan-mingguan-create') }}">
-                                <button class="btn btn-sm btn-primary" style="float: right">Tambah Kegiatan</button>
+                            <a href="{{ route('admin.kegiatan-harian-create') }}">
+                            <button class="btn btn-sm btn-primary" style="float: right">Tambah Kegiatan</button>
                             </a>
                         </div>
                         <!-- /.card-header -->
@@ -36,32 +36,25 @@
                                 <thead>
                                     <tr>
                                         <th style="width: 10px" class="text-center">No</th>
-                                        <th style="width: 10px" class="text-center">Minggu ke</th>
                                         <th class="text-center">Kegiatan</th>
                                         <th style="width: 30px" class="text-center">Action</th>
                                     </tr>
                                 </thead>
                                 <tbody>
-                                    @foreach ($kegiatanM as $kegiatan)
-                                        <tr>
-                                            <td class="text-center">{{ $kegiatan->id }}</td>
-                                            <td class="text-center">{{ $kegiatan->kegiatan_mingguan }}</td>
-                                            <td>{{ $kegiatan->isi_kegiatan }}</td>
-                                            <td style="display: flex; gap: 5px;" class="text-center">
-                                                <form action="{{ route('admin.kegiatan-mingguan-delete',['id' => $kegiatan->id]) }}" method="post">
-                                                    @csrf
-                                                    @method('delete')
-                                                    <a
-                                                        href="{{ route('admin.kegiatan-mingguan-show', ['id' => $kegiatan->id]) }}">
-                                                        <button class="btn btn-sm btn-success"><i
-                                                                class="bi bi-pencil-square"></i></button>
-                                                    </a>
-                                                    <button class="btn btn-sm btn-danger"><i
-                                                            class="bi bi-trash3"></i></button>
-                                                </form>
-                                            </td>
-                                        </tr>
-                                    @endforeach
+                                    {{-- @foreach ($kegiatanH as $kegiatan) --}}
+                                    <tr>
+                                        {{-- <td class="text-center">{{ $kegiatan->id }}</td> --}}
+                                        {{-- <td>{{ $kegiatan->isi_kegiatan }}</td> --}}
+                                        <td style="display: flex; gap: 5px;" class="text-center">
+                                            {{-- <a
+                                                    href="{{ route('admin.kegiatan-mingguan-show', ['id' => $kegiatan->id]) }}">
+                                                    <button class="btn btn-sm btn-success"><i
+                                                            class="bi bi-pencil-square"></i></button>
+                                                </a> --}}
+                                            <button class="btn btn-sm btn-danger"><i class="bi bi-trash3"></i></button>
+                                        </td>
+                                    </tr>
+                                    {{-- @endforeach --}}
                                 </tbody>
                             </table>
                         </div>

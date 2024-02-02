@@ -26,7 +26,7 @@
               <div class="card">
                 <div class="card-header">
                   <h3 class="card-title">Bordered Table</h3>
-                  <a href="{{ route('admin.admin-kegiatan-mingguan-create') }}">
+                  <a href="{{ route('admin.kegiatan-mingguan-create') }}">
                     <button  type="submit" class="btn btn-sm btn-primary" style="float: right" >Tambah Slide</button>
                   </a>
                 </div>
