@@ -9,7 +9,7 @@ class UploadimgController extends Controller
 {
     public function uploadimg(Request $request)
     {
-        dd($request->all());
+        // dd($request->all());
         $image = $request->image;
 
         if (!empty($image)) {
