@@ -42,23 +42,30 @@
                                     </tr>
                                 </thead>
                                 <tbody>
+
+                                    @php
+                                        $no = 1;
+                                    @endphp
+
                                     @foreach ($kegiatanM as $kegiatan)
                                         <tr>
-                                            <td class="text-center">{{ $kegiatan->id }}</td>
+                                            <td class="text-center">{{ $no++ }}</td>
                                             <td class="text-center">{{ $kegiatan->kegiatan_mingguan }}</td>
                                             <td>{{ $kegiatan->isi_kegiatan }}</td>
                                             <td style="display: flex; gap: 5px;" class="text-center">
-                                                    <a
-                                                        href="{{ route('admin.kegiatan-mingguan-show', ['id' => $kegiatan->id]) }}">
-                                                        <button class="btn btn-sm btn-success"><i
-                                                                class="bi bi-pencil-square"></i></button>
-                                                    </a>
-                                                    <form action="{{ route('admin.kegiatan-mingguan-delete',['id' => $kegiatan->id]) }}" method="post">
-                                                        @csrf
-                                                        @method('delete')
-                                                        <button class="btn btn-sm btn-danger"><i
-                                                                class="bi bi-trash3"></i></button>
-                                                    </form>
+                                                <a
+                                                    href="{{ route('admin.kegiatan-mingguan-show', ['id' => $kegiatan->id]) }}">
+                                                    <button class="btn btn-sm btn-success"><i
+                                                            class="bi bi-pencil-square"></i></button>
+                                                </a>
+                                                <form
+                                                    action="{{ route('admin.kegiatan-mingguan-delete', ['id' => $kegiatan->id]) }}"
+                                                    method="post">
+                                                    @csrf
+                                                    @method('delete')
+                                                    <button class="btn btn-sm btn-danger"><i
+                                                            class="bi bi-trash3"></i></button>
+                                                </form>
                                             </td>
                                         </tr>
                                     @endforeach
@@ -81,3 +88,4 @@
     </section>
     <!-- /.content -->
 @endsection
+

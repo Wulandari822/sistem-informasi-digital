@@ -66,7 +66,7 @@
                                 <p>Kegiatan Harian</p>
                             </a>
                         </li>
-                        <li class="nav-item {{ request()->routeIs('admin.kegiatan-mingguan') ? 'menu-open' : '' }}">
+                        <li class="nav-item">
                             <a href="{{ route('admin.kegiatan-mingguan') }}"
                                 class="nav-link {{ request()->routeIs('admin.kegiatan-mingguan') ? 'active' : '' }}">
                                 <i class="far fa-circle nav-icon"></i>

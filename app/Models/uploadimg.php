@@ -5,12 +5,12 @@ namespace App\Models;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
 
-class Slide1 extends Model
+class uploadimg extends Model
 {
     use HasFactory;
 
-    protected $table = 'slide1s';
+    protected $table = 'uploadimgs';
     protected $fillable = [
-        'img',
+        'name',
     ];
 }

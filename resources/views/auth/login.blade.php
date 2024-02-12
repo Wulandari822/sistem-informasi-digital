@@ -85,29 +85,6 @@
     <script src="{{ asset('admin/plugins/bootstrap/js/bootstrap.bundle.min.js') }}"></script>
     <!-- AdminLTE App -->
     <script src="{{ asset('admin/dist/js/adminlte.min.js') }}"></script>
-    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
-
-    @if ($message = Session::get('logout'))
-        <script>
-            Swal.fire({
-                icon: "success",
-                title: "Berhasil",
-                text: "{{ $message }}",
-                footer: '<p href="#">Silahkan cek kembali akun anda</p>'
-            });
-        </script>
-    @endif
-
-    @if ($message = Session::get('failed'))
-        <script>
-            Swal.fire({
-                icon: "error",
-                title: "Oops...",
-                text: "{{ $message }}",
-                footer: '<p href="#">Silahkan cek kembali akun anda</p>'
-            });
-        </script>
-    @endif
 
 </body>
 

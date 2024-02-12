@@ -27,7 +27,7 @@ class KegiatanMingguanController extends Controller
         ]);
 
         KegiatanMingguan::create($request->all());
-        return redirect()->route('admin.kegiatan-mingguan')->with('succes', 'Kegiatan Mingguan Berhasil di Input');
+        return redirect()->route('admin.kegiatan-mingguan')->with('create', 'Kegiatan Mingguan Berhasil di Input');
     }
 
     public function show(Request $request, $id)
@@ -55,7 +55,7 @@ class KegiatanMingguanController extends Controller
             'isi_kegiatan' => $request->input('isi_kegiatan'),
         ]);
 
-        return redirect()->route('admin.kegiatan-mingguan')->with('success', 'Kegiatan Mingguan Berhasil di Update');
+        return redirect()->route('admin.kegiatan-mingguan')->with('update', 'Kegiatan Mingguan Berhasil di Update');
     }
 
     public function delete(Request $request, $id)

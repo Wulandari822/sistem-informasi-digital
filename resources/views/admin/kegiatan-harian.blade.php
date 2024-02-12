@@ -26,7 +26,7 @@
                     <div class="card">
                         <div class="card-header">
                             <h3 class="card-title">Bordered Table</h3>
-                            <a href="{{ route('admin.kegiatan-harian-create') }}">
+                            {{-- <a href="{{ route('admin.kegiatan-harian-create') }}"> --}}
                             <button class="btn btn-sm btn-primary" style="float: right">Tambah Kegiatan</button>
                             </a>
                         </div>
