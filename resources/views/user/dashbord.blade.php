@@ -6,7 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
     <meta name="description" content="" />
     <meta name="author" content="" />
-    <title>Blog Post - Start Bootstrap Template</title>
+    <title>Informasi Digital SMK Wikrama Bogor</title>
 
     <!-- Google Font: Source Sans Pro -->
   <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,400i,700&display=fallback">
@@ -52,7 +52,27 @@
     .carousel-caption h5 {
         color: white;
     }
+
+    /* Ganti warna font ke putih */
+    .fw-bolder.mb-1 {
+        color: #EFECEC;
+    }
 </style>
+
+<style>
+    body {
+        /* Background color as fallback */
+        background-color: #0C2D57;
+
+        /* Background image */
+        background-image: url('assets/background.jpg');
+
+        /* Background image size and position */
+        background-size: cover;
+        background-position: center;
+    }
+</style>
+
 
 <body>
     <!-- Page content-->
@@ -62,32 +82,28 @@
                 <!-- Post content-->
                 <article>
                     <!-- Post header-->
-                    <header class="mb-4">
-                        <!-- Post title-->
-                        <h1 class="fw-bolder mb-1">Kegiatan Harian</h1>
-                    </header>
-
+                    <!-- Post header-->
+<!-- Post header-->
+<header class="mb-4">
+    <!-- Post title dengan gaya font serif yang menarik -->
+    <h1 class="fw-bolder mb-1" style="font-family: 'Playfair Display', serif;">Kegiatan Mingguan</h1>
+</header>
                     <div class="input-group mb-3">
                         <span class="input-group-text" id="inputGroup-sizing-default">08.00</span>
                         <input type="text" class="form-control" aria-label="Sizing example input"
                             aria-describedby="inputGroup-sizing-default" disabled>
                     </div>
                     <div class="input-group mb-3">
-                        <span class="input-group-text" id="inputGroup-sizing-default">08.00</span>
+                        <span class="input-group-text" id="inputGroup-sizing-default">09.00</span>
                         <input type="text" class="form-control" aria-label="Sizing example input"
                             aria-describedby="inputGroup-sizing-default" disabled>
                     </div>
                     <div class="input-group mb-3">
-                        <span class="input-group-text" id="inputGroup-sizing-default">08.00</span>
+                        <span class="input-group-text" id="inputGroup-sizing-default">10.00</span>
                         <input type="text" class="form-control" aria-label="Sizing example input"
                             aria-describedby="inputGroup-sizing-default" disabled>
                     </div>
-                    <div class="input-group mb-3">
-                        <span class="input-group-text" id="inputGroup-sizing-default">08.00</span>
-                        <input type="text" class="form-control" aria-label="Sizing example input"
-                            aria-describedby="inputGroup-sizing-default" disabled>
-                    </div>
-
+                
                     <div id="carouselExample" class="carousel slide" data-bs-ride="carousel">
                         <div class="carousel-inner">
                             <div class="carousel-item">
@@ -124,12 +140,14 @@
 
             <!-- Side widgets-->
             <div class="col-lg-6">
-                <header class="mb-4">
-                    <!-- Post title-->
-                    <h1 class="fw-bolder mb-1">Kegiatan Mingguan</h1>
-                </header>
+                <!-- Post header-->
+<header class="mb-4">
+    <!-- Post title dengan gaya font serif yang menarik -->
+    <h1 class="fw-bolder mb-1" style="font-family: 'Playfair Display', serif;">Kegiatan Harian</h1>
+</header>
+
                 <div class="card mb-4">
-                    <div class="card-header">Minggu 1</div>
+                    <div class="card-header" style="font-weight: bold; font-family: 'Playfair Display', serif;">Minggu 1</div>
                     <div class="card-body">You can put anything you want inside of these side widgets. They are easy to
                         use, and feature the Bootstrap 5 card component!</div>
                 </div>
