@@ -49,9 +49,9 @@
                 </li>
 
                 <li
-                    class="nav-item {{ request()->routeIs('admin.kegiatan-harian', 'admin.kegiatan-mingguan', 'admin.slide1') ? 'menu-open active' : '' }}">
+                    class="nav-item {{ request()->routeIs('admin.kegiatan-harian', 'admin.kegiatan-mingguan', 'admin.slide1', 'admin.kegiatan-mingguan-create' ,'admin.slide1-craate') ? 'menu-open active' : '' }}">
                     <a href="#"
-                        class="nav-link {{ request()->routeIs('admin.kegiatan-mingguan') ? 'active' : '' }}">
+                        class="nav-link {{ url()->current() == route('admin.kegiatan-harian') || url()->current() == route('admin.kegiatan-mingguan') || url()->current() == route('admin.slide1') || url()->current() == route('admin.kegiatan-mingguan-create') || url()->current() == route('admin.slide1-craate')  ? 'menu-open active' : '' }}">
                         <i class="nav-icon fas fa-edit"></i>
                         <p>
                             Tambah Konten
@@ -68,14 +68,14 @@
                         </li>
                         <li class="nav-item">
                             <a href="{{ route('admin.kegiatan-mingguan') }}"
-                                class="nav-link {{ request()->routeIs('admin.kegiatan-mingguan') ? 'active' : '' }}">
+                                class="nav-link {{ request()->routeIs('admin.kegiatan-mingguan', 'admin.kegiatan-mingguan-create') ? 'active' : '' }}">
                                 <i class="far fa-circle nav-icon"></i>
                                 <p>Kegiatan Mingguan</p>
                             </a>
                         </li>
-                        <li class="nav-item {{ request()->routeIs('admin.slide1') ? 'menu-open' : '' }}">
+                        <li class="nav-item">
                             <a href="{{ route('admin.slide1') }}"
-                                class="nav-link {{ request()->routeIs('admin.slide1') ? 'active' : '' }}">
+                                class="nav-link {{ request()->routeIs('admin.slide1','admin.slide1-craate') ? 'active' : '' }}">
                                 <i class="far fa-circle nav-icon"></i>
                                 <p>Slide 1</p>
                             </a>
