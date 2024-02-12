@@ -27,16 +27,17 @@
               <!-- general form elements -->
               <div class="card card-primary">
                 <div class="card-header">
-                  <h3 class="card-title">Form Kegiatan Mingguan</h3>
+                  <h3 class="card-title">Form Kegiatan Harian</h3>
                 </div>
+                
                 <!-- /.card-header -->
                 <!-- form start -->
-                <form action="{{ route('admin.kegiatan-mingguan-store') }}" method="POST">
+                <form action="{{ route('admin.kegiatan-harian-store') }}" method="POST">
                   @csrf
                   <div class="card-body">
                     <div class="form-group">
-                      <label for="exampleInputEmail1">Minggu Ke</label>
-                      <input type="Number" name="kegiatan_mingguan" class="form-control" id="" placeholder="Input hanya number">
+                      <label for="exampleInputEmail1">Hari</label>
+                      <input type="Number" name="kegiatan_hariini" class="form-control" id="" placeholder="Input hanya number">
                     </div>
                     <div class="form-group">
                       <label for="exampleInputPassword1">Isi Kegiatan</label>

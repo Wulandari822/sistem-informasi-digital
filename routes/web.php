@@ -30,6 +30,12 @@ Route::group(['prefix' => 'admin', 'middleware'=> ['auth'],'as'=> 'admin.'],func
     Route::get('dashbord',[AdminController::class,'index'])->name('dashbord');
 
     Route::get('kegiatan-harian',[KegiatanHarianController::class,'index'])->name('kegiatan-harian');
+    Route::get('kegiatan-harian-create',[KegiatanHarianController::class,'create'])->name('kegiatan-harian-create');
+    Route::post('kegiatan-harian-store',[KegiatanHarianController::class,'store'])->name('kegiatan-harian-store');
+    Route::get('kegiatan-harian/{id}/show',[KegiatanHarianController::class,'show'])->name('kegiatan-harian-show');
+    Route::delete('kegiatan-harian/{id}/delete',[KegiatanHarianController::class,'delete'])->name('kegiatan-harian-delete');
+
+
 
     Route::get('kegiatan-mingguan',[KegiatanMingguanController::class,'index'])->name('kegiatan-mingguan');
     Route::get('kegiatan-mingguan-create',[KegiatanMingguanController::class,'create'])->name('kegiatan-mingguan-create');

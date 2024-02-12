@@ -13,5 +13,6 @@ class KegiatanHarian extends Model
     
     protected $fillable = [
         'kegiatan_hariini',
+        'isi_kegiatan',
     ];
 }

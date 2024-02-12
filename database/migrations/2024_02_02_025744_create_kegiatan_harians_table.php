@@ -16,6 +16,7 @@ class CreateKegiatanHariansTable extends Migration
         Schema::create('kegiatan_harians', function (Blueprint $table) {
             $table->id();
             $table->string('kegiatan_hariini');
+            $table->string('isi_kegiatan');
             $table->timestamps();
         });
     }
